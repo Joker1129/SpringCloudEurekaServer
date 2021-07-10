@@ -1,9 +1,9 @@
+server:
+  port: 10000
+
 spring:
   application:
     name: eureka-peer
-
-server:
-  port: 10000
 
 eureka:
   instance:
@@ -11,11 +11,10 @@ eureka:
     instance-id: dev
   client:
     fetch-registry: false
-    register-with-eureka: false  #是否注册到eurekaClient列表
+    register-with-eureka: false
     service-url:
       defaultZone: http://localhost:10000/eureka/
   server:
     wait-time-in-ms-when-sync-empty: 0
     enable-self-preservation: true
-    peer-eureka-nodes-update-interval-ms: 0
-
+    peer-eureka-nodes-update-interval-ms: 5000
